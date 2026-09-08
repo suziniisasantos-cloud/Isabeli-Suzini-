@@ -33,7 +33,7 @@ body::before {
     /*posiciona a luz vermelha*/
     background: #dc2626;
     top: 20%;
-    left: 25%;
+    left: 25%; 
 }
 
 body::after{
