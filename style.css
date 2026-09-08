@@ -1,0 +1,31 @@
+* {
+    /*configuração dos elementos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+}
+
+body{
+    /*configuração principal da página*/
+    background: #090d16;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before, body::after {
+    /*cria os efeitos de luz no fundo*/
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80%);
+    z-index: 0;
+}   
+
