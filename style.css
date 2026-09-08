@@ -29,3 +29,17 @@ body::before, body::after {
     z-index: 0;
 }   
 
+body::before {
+    /*posiciona a luz vermelha*/
+    background: #dc2626;
+    top: 20%;
+    left: 25%;
+}
+
+body::after{
+    /*posiciona a luz azul*/
+    background: #2563eb;
+    bottom: 20%;
+    right: 25%;
+}
+
