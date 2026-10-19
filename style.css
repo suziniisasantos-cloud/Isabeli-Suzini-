@@ -149,3 +149,23 @@ p{
     /*define o espaço entre os cartôes*/
     gap: 20px;
 }
+
+.infor-card{
+    /*define o fundo e as bordas dos casrtões*/
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+    /*aredonda os casntos*/
+    border-radius: 18px;
+
+    /*define o espaçamento interno*/
+
+    padding: 30px;
+    
+    /*alinha o conteúdo a esqerda*/
+    text-align: left;
+
+    /*adiciona uma transição suave*/
+    transition: 0.3s ease;
+}
