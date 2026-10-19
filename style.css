@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+} 
 
 body{
-    /* Configuração principal da página*/
+    /*configuração principal da página*/
     background: #090d16;
     color: #f8fafc;
     min-height: 100vh;
@@ -18,35 +18,32 @@ body{
     position: relative;
 }
 
-body::before, body::after{
-    /*cria efeitos de luz no fundo*/
+body::before, body::after {
+    /*cria os efeitos de luz no fundo*/
     content: '';
     position: absolute;
     width: 300px;
     height: 300px;
     border-radius: 50%;
     filter: blur(80px);
-<<<<<<< HEAD
     z-index: 0; 
 }   
-=======
-    z-index: 0;
-}
->>>>>>> 8c62769bf130e9c7c3808efde8d132ccb2f37f62
 
-body::before{
+body::before {
     /*posiciona a luz vermelha*/
     background: #dc2626;
     top: 20%;
-    left: 25%;
+    left: 25%; 
 }
 
-body::after {
-    background: #2563db;
+body::after{
+    /*posiciona a luz azul*/
+    background: #2563eb;
     bottom: 20%;
     right: 25%;
 }
- .card {
+
+.card {
     /*estiliza o cartão principal*/
     position: relative;
     z-index: 1;
@@ -59,14 +56,17 @@ body::after {
     max-width: 420px;
     width: 90%;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0 , 0, 0.5);
-    transition: transform 0.3s ease , border-color 0.3s ease;
- }
- .card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(255,255,255,0.25);
+    box-sizing: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
 
- }
+.card:hover {
+    /*efeito ao passar o mouse no cartão*/
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.25);
+} 
+
+ 
 .badge{
     display: inline-block;
     background: rgba(220, 38, 38, 0.2);
@@ -91,15 +91,6 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
-<<<<<<< HEAD
-.card:hover {
-    /*efeito ao passar o mouse no cartão*/
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
-
-=======
 p{
     /*estiliza o texto/paragrafo*/
     color: #94a3b8;
@@ -131,4 +122,30 @@ p{
     box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
     transform: scale(1.02);
  }
->>>>>>> 8c62769bf130e9c7c3808efde8d132ccb2f37f62
+
+ /* Segunda parte do nosso css */
+
+.conteudo{
+    /* define o tamanho e a posição da nova sessão*/
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.conteudo h2{
+    /* Estiliza o titulo da nova sessão*/
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.informacoes {
+    /*organiza os cartões lado a lado*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /*define o espaço entre os cartôes*/
+    gap: 20px;
+}
