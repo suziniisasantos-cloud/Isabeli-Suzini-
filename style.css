@@ -191,5 +191,5 @@ p{
  
 .info-card p:last-child {
     /*remove o espaço abaixo do ultimo paragrafo*/
-    margin-bottom: 0;
+    margin-bottom: 0; 
 }
