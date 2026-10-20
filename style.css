@@ -150,6 +150,7 @@ p{
     gap: 20px;
 }
 
+<<<<<<< HEAD
 .info-card{
     /*define o fundo e as bordas dos cartões*/
     background:rgba(255, 255, 255, 0.04);
@@ -192,4 +193,24 @@ p{
 .info-card p:last-child {
     /*remove o espaço abaixo do ultimo paragrafo*/
     margin-bottom: 0;
+=======
+.infor-card{
+    /*define o fundo e as bordas dos casrtões*/
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+    /*aredonda os casntos*/
+    border-radius: 18px;
+
+    /*define o espaçamento interno*/
+
+    padding: 30px;
+    
+    /*alinha o conteúdo a esqerda*/
+    text-align: left;
+
+    /*adiciona uma transição suave*/
+    transition: 0.3s ease;
+>>>>>>> 716d18974f4c0c50e77e6c9aefdf28c5e616ae93
 }
