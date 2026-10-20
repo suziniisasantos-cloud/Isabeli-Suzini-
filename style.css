@@ -188,7 +188,7 @@ p{
     /*ajusta o espaçamento entre os parágrafos*/
     margin-bottom: 12px;
 }
-
+ 
 .info-card p:last-child {
     /*remove o espaço abaixo do ultimo paragrafo*/
     margin-bottom: 0;
