@@ -231,7 +231,7 @@ p {
     }
 }
 
-/*PARTE 3: ESTILOS DAS NOVAS FUNCIONALIDADES*/
+/*PARTE 3: NOVAS FUNCIONALIDADES*/
 /*Coloca os novos elementos acima das luzes decorativas do fundo.*/
 .menu-estudo, .rodape-estudo{
     position: relative;
