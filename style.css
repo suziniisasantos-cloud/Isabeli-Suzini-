@@ -1,0 +1,232 @@
+* {
+    /*configuração dos elementos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+}
+
+body{
+    /*configuração principal da página*/
+    background: #090d16;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    /* ALTERAÇÃO: permite que a pagina tenha rolagem */
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: relative;
+
+    /*NOVO: oraniza os elemnetos um abaixo do outro*/
+    flex-direction: column;
+
+    /* NOVO: cria espaço entre o cartão e a nova seção*/
+    gap: 60px;
+
+    /*NOVO: adiciona um espaçamento nas bordas da página*/
+    padding: 80px 20px;
+}
+
+body::before, body::after{
+    /*cria os efeitos de luz no fundo*/
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+body::before{
+    /*posiciona a luz vermelha*/
+    background: #dc2626;
+    top: 20%;
+    left: 25%;
+}
+
+body::after{
+    /*Posiociona a luz azul*/
+    background: #2563eb;
+    bottom: 20%;
+    right: 25%;
+}
+
+.card{
+    /*estiliza o cartão principal*/
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 40px 32px;
+    border-radius: 24px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+    /* NOVO: impede que o cartão seja comprimido*/
+    flex-shrink: 0;
+}
+
+.card:hover{
+    /*efeito ao passar o mouse no cartao*/
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.badge {
+    /*estiliza a etiqueta/badge*/
+    display: inline-block;
+    background: rgba(220, 38, 38, 0.2);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+h1 {
+    /*Estiliza o titulo principal*/
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    /*Estiliza o texto/paragrafo*/
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.btn{
+    /*Estiliza o botão*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #dc2626;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 12x;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow:  0 0 20px rgba(220, 38, 38, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    /*Efeito ao passar o mouse no botão*/
+    background: #ef4444;
+    box-shadow:  0 0 25px rgba(239, 68, 68, 0.6);
+    transform: scale(1.02);
+}
+
+/* Segunda parte do nosso css */
+
+.conteudo{
+    /* define o tamanho e a posição da nova sessão*/
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.conteudo h2{
+    /* Estiliza o titulo da nova sessão*/
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.informacoes{
+    /*Organiza os cartões lado a lado*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /*define o espaço entre os carões*/
+    gap: 20px;
+}
+
+.info-card{
+    /*define o fundo e as bordas dos cartões*/
+    background:rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /*Arredonda os cantos*/
+    border-radius: 18px;
+
+    /*Define o espaçamento interno*/
+    padding: 30px;
+
+    /*Alinha o conteudo a esquerda*/
+    text-align: left;
+
+    /*Adiciona uma transição suave*/
+    transition: 0.3s ease;
+}
+
+.info-card:hover{
+    /*eleva o cartão quando o mouse passa obre ele*/
+    transform: translateY(-5px);
+
+    /*altera a cor da borda para vermelho*/
+    border-color: #dc2626;
+}
+
+.info-card h3{
+    /*Estiliza os titulos GIT e GITHUB*/
+    color: #f87171;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.info-card p{
+    /*Ajusta o espaçamento entre os paragrafos*/
+    margin-bottom: 12px;
+}
+
+.info-card p:last-child{
+    /*Remove o espaço abaixo do ultimo paragrafo*/
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .informacoes{
+        /* Organiza os cartões um abaixo do outro
+        quando a tela for pequena*/
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo h2{
+        /**diminui o tamanho do titulo no celualr*/
+        font-size: 1.6rem;
+    }
+
+    .info-card{
+        /*Ajusta o espaçamento interior dos cartões*/
+        padding: 22px;
+    }
+}
